@@ -1,0 +1,31 @@
+<style>
+    
+.article-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+.article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+</style>
+{% load static%}
+{% block content %}
+
+<div class="article-box">
+    {% for res in result %}
+      <div class="article">
+        <p> Arcticle name: {{res.name}} </p>
+        <p> Arcticle url: {{res.url}} </p>
+        <p> Arcticle author: {{res.author}} </p>
+        <p> Arcticle date: {{res.date}} </p>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}

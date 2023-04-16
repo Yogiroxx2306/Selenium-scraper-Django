@@ -1,0 +1,20 @@
+{% load static%}
+{% block content %}
+
+<div>
+  <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="gotoPython()">
+  <p>The server time is {{date}}  </p>
+
+  
+  <script>
+          
+          function gotoPython() {
+          // Show an alert
+          alert('Starting Python script...');
+          
+          // Redirect the user to the Python script
+          window.location.href = "/python_file";
+        }
+      </script>
+</div>
+{% endblock %}
